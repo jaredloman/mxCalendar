@@ -42,11 +42,6 @@ class mxCalendars {
             'mgr_allday_start' => $this->modx->getOption('mxcalendars.mgr_allday_start', '', '8:00 am'),
             'mgr_allday_end' => $this->modx->getOption('mxcalendars.mgr_allday_end', '', '5:00 pm'),
             'isAdministrator' => $this->modx->user->isMember('Administrator'),
-			'hideImageTab' => (bool)$this->modx->getOption('mxcalendars.hideImageTab', '', false),
-			'hideVideoTab' => (bool)$this->modx->getOption('mxcalendars.hideVideoTab', '', false),
-			'hideLocationTab' => (bool)$this->modx->getOption('mxcalendars.hideLocationTab', '', false),
-			'hideLinkTab' => (bool)$this->modx->getOption('mxcalendars.hideLinkTab', '', false),
-			'hideFormTab' => (bool)$this->modx->getOption('mxcalendars.hideFormTab', '', false),
         ),$config);
         $this->modx->addPackage('mxcalendars',$this->config['modelPath']);
         $this->modx->getService('lexicon','modLexicon');
@@ -529,8 +524,6 @@ class mxCalendars {
                             } 
                             
                             $el['startdate'] = strftime('%l:%M %p', $el['startdate']);
-                            $el['startdateraw'] = $el['startdate']; //-- Add for full control via output modifier 
-                            
                             
                             /**
                              * @todo Remove this once final performance testing is completed

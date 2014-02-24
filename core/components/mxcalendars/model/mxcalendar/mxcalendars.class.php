@@ -42,6 +42,11 @@ class mxCalendars {
             'mgr_allday_start' => $this->modx->getOption('mxcalendars.mgr_allday_start', '', '8:00 am'),
             'mgr_allday_end' => $this->modx->getOption('mxcalendars.mgr_allday_end', '', '5:00 pm'),
             'isAdministrator' => $this->modx->user->isMember('Administrator'),
+			'hideImageTab' => $this->modx->getOption('mxcalendars.hideImageTab', '', false),
+			'hideVideoTab' => $this->modx->getOption('mxcalendars.hideVideoTab', '', false),
+			'hideLocationTab' => $this->modx->getOption('mxcalendars.hideLocationTab', '', false),
+			'hideLinkTab' => $this->modx->getOption('mxcalendars.hideLinkTab', '', false),
+			'hideFormTab' => $this->modx->getOption('mxcalendars.hideFormTab', '', false),
         ),$config);
         $this->modx->addPackage('mxcalendars',$this->config['modelPath']);
         $this->modx->getService('lexicon','modLexicon');

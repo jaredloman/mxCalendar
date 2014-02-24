@@ -5,7 +5,7 @@ mxcCore.panel.Home = function(config) {
         ,baseCls: 'modx-formpanel'
 		,cls: 'container'
         ,items: [{
-            html: '<img src="'+mxcCore.config.assetsUrl+'images/mxcalendar.png" alt="'+_('mxcalendars.management')+'" />'
+            html: '<h2>'+_('mxcalendars.management')+'</h2>'
             ,border: false
             ,cls: 'modx-page-header'
         },{
